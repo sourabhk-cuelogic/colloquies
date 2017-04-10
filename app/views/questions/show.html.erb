@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class='row'>
+	<div class='col-md-12'>
+		<b>Title: </b>
+		<%= @question.title %>
+	</div>
+	<div class='col-md-12'>
+		<b>Description: </b>
+	    <%= @question.description %>
+	</div>
+	<div class='col-md-12'>
+		<b>Answers: </b>
+		<%- @question.answers.each do |answer| %>
+			<div class='col-md-12'>
+			    <p><%= answer.body %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
+</br>
+<div class='row'>
+	<div class='col-md-1'>
+		<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary active' %>
+	</div>
+	<div class='col-md-1'>
+		<%= link_to 'Back', questions_path, class: 'btn btn-primary active' %>
+	</div>
+</div>

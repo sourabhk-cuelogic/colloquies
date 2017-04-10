@@ -1,0 +1,23 @@
+
+<%= form_for @answer do |f| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label 'Select Question', class: "col-md-4 control-label" %>
+    <%= f.select :question_id, Question.all.collect {|a| [ a.title, a.id ] }, { include_blank: true } %>
+  </div>
+  <div class="field">
+    <%= f.label :answer, class: "col-md-4 control-label" %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary active' %>
+  </div>
+<% end %>
