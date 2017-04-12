@@ -259,12 +259,13 @@ DEPENDENCIES
   capybara
   chromedriver-helper
   coffee-rails (~> 4.1.0)
-  factory_girl_rails
+  factory_girl_rails (~> 4.0)
   faker
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  minitest
   pg (~> 0.15)
   rails (= 4.2.6)
   rails_12factor

@@ -42,11 +42,12 @@ group :development, :test do
 end
 
 group :test do
+  gem 'minitest'
   gem 'faker'
   # gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
-  gem 'factory_girl_rails', :require => false
+  gem "factory_girl_rails", "~> 4.0"
   gem 'selenium-webdriver', '2.53.4'
   gem 'chromedriver-helper'
   gem 'shoulda', '~> 3.5'
